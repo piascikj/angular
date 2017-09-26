@@ -1226,7 +1226,7 @@ export class TransitionAnimationEngine {
       const element = timelineInstruction.element;
       allConsumedElements.add(element);
 
-      // FIXME (matsko): make sure to-be-removed animations are removed properly
+      // FIXME (matsko): make sure to-be-removed animations are removed properly id:52 gh:53
       const details = element[REMOVAL_FLAG];
       if (details && details.removedBeforeQueried) return new NoopAnimationPlayer();
 

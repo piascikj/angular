@@ -5,7 +5,7 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://angular.io/license
  */
-// TODO(tbosch): figure out why we need this as it breaks node code within ngc-wrapped
+// TODO (tbosch): figure out why we need this as it breaks node code within ngc-wrapped id:40 gh:41
 /// <reference types="node" />
 import * as ng from '@angular/compiler-cli';
 import {BazelOptions, CachedFileLoader, CompilerHost, FileCache, FileLoader, UncachedFileLoader, constructManifest, debug, fixUmdModuleDeclarations, parseTsconfig, runAsWorker, runWorkerLoop} from '@bazel/typescript';
@@ -16,11 +16,11 @@ import * as ts from 'typescript';
 
 const EXT = /(\.ts|\.d\.ts|\.js|\.jsx|\.tsx)$/;
 const NGC_GEN_FILES = /^(.*?)\.(ngfactory|ngsummary|ngstyle|shim\.ngstyle)(.*)$/;
-// FIXME: we should be able to add the assets to the tsconfig so FileLoader
+// FIXME: we should be able to add the assets to the tsconfig so FileLoader id:39 gh:40
 // knows about them
 const NGC_ASSETS = /\.(css|html|ngsummary\.json)$/;
 
-// TODO(alexeagle): probably not needed, see
+// TODO (alexeagle): probably not needed, see id:53 gh:54
 // https://github.com/bazelbuild/rules_typescript/issues/28
 const ALLOW_NON_HERMETIC_READS = true;
 
@@ -141,7 +141,7 @@ export function compile({allowNonHermeticReads, compilerOpts, tsHost, bazelOpts,
         moduleName, containingFile, compilerOptions, generatedFileModuleResolverHost);
   }
 
-  // TODO(alexeagle): does this also work in third_party?
+  // TODO (alexeagle): does this also work in third_party? id:111 gh:112
   const allowNonHermeticRead = false;
   const bazelHost = new CompilerHost(
       files, compilerOpts, bazelOpts, tsHost, fileLoader, ALLOW_NON_HERMETIC_READS,

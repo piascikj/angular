@@ -42,7 +42,7 @@ import {ResponseOptionsArgs} from './interfaces';
  * @deprecated use @angular/common/http instead
  */
 export class ResponseOptions {
-  // TODO: FormData | Blob
+  // TODO: FormData | Blob id:182 gh:183
   /**
    * String, Object, ArrayBuffer or Blob representing the body of the {@link Response}.
    */

@@ -6,6 +6,6 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-export function setTemplateCache(cache: any /** TODO #9100 */): void {
+export function setTemplateCache(cache: any /** TODO #9100  id:229 gh:230*/): void {
   (<any>window).$templateCache = cache;
 }

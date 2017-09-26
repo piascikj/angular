@@ -45,5 +45,5 @@ const HEROES: Hero[] = [
 ];
 
 function getHeroes(): Promise<Hero[]> {
-  return Promise.resolve(HEROES); // TODO: get hero data from the server;
+  return Promise.resolve(HEROES); // TODO: get hero data from the server; id:7 gh:8
 }

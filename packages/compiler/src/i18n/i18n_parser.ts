@@ -113,7 +113,7 @@ class _I18nVisitor implements html.Visitor {
     // ICU placeholders should not be replaced with their original content but with the their
     // translations. We need to create a new visitor (they are not re-entrant) to compute the
     // message id.
-    // TODO(vicb): add a html.Node -> i18n.Message cache to avoid having to re-create the msg
+    // TODO (vicb): add a html.Node -> i18n.Message cache to avoid having to re-create the msg id:87 gh:88
     const phName = this._placeholderRegistry.getPlaceholderName('ICU', icu.sourceSpan.toString());
     const visitor = new _I18nVisitor(this._expressionParser, this._interpolationConfig);
     this._placeholderToMessage[phName] = visitor.toI18nMessage([icu], '', '', '');

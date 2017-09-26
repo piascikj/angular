@@ -34,7 +34,7 @@ cp -v package.json $TMP
   cd $TMP
   set -ex -o pipefail
   npm install ${PKGS[*]} $TYPESCRIPT_2_4
-  # TODO(alexeagle): allow this to be npm link instead
+  # TODO (alexeagle): allow this to be npm link instead id:277 gh:278
   npm install ${LINKABLE_PKGS[*]}
 
   ./node_modules/.bin/tsc --version
@@ -42,7 +42,7 @@ cp -v package.json $TMP
   # Use ngc-wrapped directly so we don't produce *.ngfactory.ts files!
 
   # Compile the compiler-cli integration tests
-  # TODO(vicb): restore the test for .xtb
+  # TODO (vicb): restore the test for .xtb id:258 gh:259
   #./node_modules/.bin/ngc -p tsconfig-build.json --i18nFile=src/messages.fi.xtb --locale=fi --i18nFormat=xtb
 
   # Generate the metadata for the third-party modules

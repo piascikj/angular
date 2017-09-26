@@ -128,7 +128,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter extends
   // ResolvedModule.isExternalLibraryImport
   // (see our isSourceFile method).
   resolveModuleNames(moduleNames: string[], containingFile: string): ts.ResolvedModule[] {
-    // TODO(tbosch): this seems to be a typing error in TypeScript,
+    // TODO (tbosch): this seems to be a typing error in TypeScript, id:283 gh:284
     // as it contains assertions that the result contains the same number of entries
     // as the given module names.
     return <ts.ResolvedModule[]>moduleNames.map(
@@ -304,7 +304,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter extends
   }
 
   shouldGenerateFile(fileName: string): {generate: boolean, baseFileName?: string} {
-    // TODO(tbosch): allow generating files that are not in the rootDir
+    // TODO (tbosch): allow generating files that are not in the rootDir id:78 gh:79
     // See https://github.com/angular/angular/issues/19337
     if (this.options.rootDir && !pathStartsWithPrefix(this.options.rootDir, fileName)) {
       return {generate: false};
@@ -337,7 +337,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter extends
   }
 
   shouldGenerateFilesFor(fileName: string) {
-    // TODO(tbosch): allow generating files that are not in the rootDir
+    // TODO (tbosch): allow generating files that are not in the rootDir id:144 gh:145
     // See https://github.com/angular/angular/issues/19337
     return !GENERATED_FILES.test(fileName) && this.isSourceFile(fileName) &&
         (!this.options.rootDir || pathStartsWithPrefix(this.options.rootDir, fileName));
@@ -376,7 +376,7 @@ export class TsCompilerAotCompilerTypeCheckHostAdapter extends
     if (sf) {
       addReferencesToSourceFile(sf, genFileNames);
     }
-    // TODO(tbosch): TypeScript's typings for getSourceFile are incorrect,
+    // TODO (tbosch): TypeScript's typings for getSourceFile are incorrect, id:86 gh:87
     // as it can very well return undefined.
     return sf !;
   }

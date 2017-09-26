@@ -500,7 +500,7 @@ export function main() {
     it('should support overriding factory dependencies with dependency annotations', () => {
       const providers = ReflectiveInjector.resolve([{
         provide: 'token',
-        useFactory: (e: any /** TODO #9100 */) => 'result',
+        useFactory: (e: any /** TODO #9100  id:296 gh:297*/) => 'result',
         deps: [[new Inject('dep')]]
       }]);
 

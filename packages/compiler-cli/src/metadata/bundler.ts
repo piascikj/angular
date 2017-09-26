@@ -95,7 +95,7 @@ export class MetadataBundler {
     // the exports.
     const exportedSymbols = this.exportAll(this.rootModule);
     this.canonicalizeSymbols(exportedSymbols);
-    // TODO: exports? e.g. a module re-exports a symbol from another bundle
+    // TODO: exports? e.g. a module re-exports a symbol from another bundle id:142 gh:143
     const metadata = this.getEntries(exportedSymbols);
     const privates = Array.from(this.symbolMap.values())
                          .filter(s => s.referenced && s.isPrivate)

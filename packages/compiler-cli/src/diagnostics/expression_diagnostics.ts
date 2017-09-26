@@ -161,7 +161,7 @@ function refinedVariableType(
 function getEventDeclaration(info: DiagnosticTemplateInfo, includeEvent?: boolean) {
   let result: SymbolDeclaration[] = [];
   if (includeEvent) {
-    // TODO: Determine the type of the event parameter based on the Observable<T> or EventEmitter<T>
+    // TODO: Determine the type of the event parameter based on the Observable<T> or EventEmitter<T> id:79 gh:80
     // of the event.
     result = [{name: '$event', kind: 'variable', type: info.query.getBuiltinType(BuiltinType.Any)}];
   }

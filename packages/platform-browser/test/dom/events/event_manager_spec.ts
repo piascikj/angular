@@ -29,7 +29,7 @@ export function main() {
     it('should delegate event bindings to plugins that are passed in from the most generic one to the most specific one',
        () => {
          const element = el('<div></div>');
-         const handler = (e: any /** TODO #9100 */) => e;
+         const handler = (e: any /** TODO #9100  id:244 gh:245*/) => e;
          const plugin = new FakeEventManagerPlugin(doc, ['click']);
          const manager = new EventManager([domEventPlugin, plugin], new FakeNgZone());
          manager.addEventListener(element, 'click', handler);
@@ -38,8 +38,8 @@ export function main() {
 
     it('should delegate event bindings to the first plugin supporting the event', () => {
       const element = el('<div></div>');
-      const clickHandler = (e: any /** TODO #9100 */) => e;
-      const dblClickHandler = (e: any /** TODO #9100 */) => e;
+      const clickHandler = (e: any /** TODO #9100  id:254 gh:255*/) => e;
+      const dblClickHandler = (e: any /** TODO #9100  id:221 gh:222*/) => e;
       const plugin1 = new FakeEventManagerPlugin(doc, ['dblclick']);
       const plugin2 = new FakeEventManagerPlugin(doc, ['click', 'dblclick']);
       const manager = new EventManager([plugin2, plugin1], new FakeNgZone());
@@ -64,8 +64,8 @@ export function main() {
 
       const child = getDOM().firstChild(element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvent: any /** TODO #9100 */ = null;
-      const handler = (e: any /** TODO #9100 */) => { receivedEvent = e; };
+      let receivedEvent: any /** TODO #9100  id:318 gh:319*/ = null;
+      const handler = (e: any /** TODO #9100  id:164 gh:165*/) => { receivedEvent = e; };
       const manager = new EventManager([domEventPlugin], new FakeNgZone());
       manager.addEventListener(element, 'click', handler);
       getDOM().dispatchEvent(child, dispatchedEvent);
@@ -77,8 +77,8 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvent: any /** TODO #9100 */ = null;
-      const handler = (e: any /** TODO #9100 */) => { receivedEvent = e; };
+      let receivedEvent: any /** TODO #9100  id:249 gh:250*/ = null;
+      const handler = (e: any /** TODO #9100  id:259 gh:260*/) => { receivedEvent = e; };
       const manager = new EventManager([domEventPlugin], new FakeNgZone());
 
       const remover = manager.addGlobalEventListener('document', 'click', handler);
@@ -97,9 +97,9 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvent: any /** TODO #9100 */ = null;
+      let receivedEvent: any /** TODO #9100  id:225 gh:226*/ = null;
       let receivedZone: any = null;
-      const handler = (e: any /** TODO #9100 */) => {
+      const handler = (e: any /** TODO #9100  id:319 gh:320*/) => {
         receivedEvent = e;
         receivedZone = Zone.current;
       };
@@ -123,13 +123,13 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvents: any[] /** TODO #9100 */ = [];
+      let receivedEvents: any[] /** TODO #9100  id:166 gh:167*/ = [];
       let receivedZones: any[] = [];
-      const handler1 = (e: any /** TODO #9100 */) => {
+      const handler1 = (e: any /** TODO #9100  id:253 gh:254*/) => {
         receivedEvents.push(e);
         receivedZones.push(Zone.current.name);
       };
-      const handler2 = (e: any /** TODO #9100 */) => {
+      const handler2 = (e: any /** TODO #9100  id:261 gh:262*/) => {
         receivedEvents.push(e);
         receivedZones.push(Zone.current.name);
       };
@@ -158,16 +158,16 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvents: any[] /** TODO #9100 */ = [];
+      let receivedEvents: any[] /** TODO #9100  id:228 gh:229*/ = [];
       let receivedZones: any[] = [];
       let remover1: any = null;
       let remover2: any = null;
-      const handler1 = (e: any /** TODO #9100 */) => {
+      const handler1 = (e: any /** TODO #9100  id:320 gh:321*/) => {
         receivedEvents.push(e);
         receivedZones.push(Zone.current.name);
         remover1 && remover1();
       };
-      const handler2 = (e: any /** TODO #9100 */) => {
+      const handler2 = (e: any /** TODO #9100  id:169 gh:170*/) => {
         receivedEvents.push(e);
         receivedZones.push(Zone.current.name);
       };
@@ -194,9 +194,9 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('click');
-      let receivedEvents: any[] /** TODO #9100 */ = [];
+      let receivedEvents: any[] /** TODO #9100  id:257 gh:258*/ = [];
       let receivedZones: any[] = [];
-      const handler = (e: any /** TODO #9100 */) => {
+      const handler = (e: any /** TODO #9100  id:262 gh:263*/) => {
         receivedEvents.push(e);
         receivedZones.push(Zone.current.name);
       };
@@ -224,9 +224,9 @@ export function main() {
       const element = el('<div><div></div></div>');
       getDOM().appendChild(doc.body, element);
       const dispatchedEvent = getDOM().createMouseEvent('scroll');
-      let receivedEvent: any /** TODO #9100 */ = null;
+      let receivedEvent: any /** TODO #9100  id:233 gh:234*/ = null;
       let receivedZone: any = null;
-      const handler = (e: any /** TODO #9100 */) => {
+      const handler = (e: any /** TODO #9100  id:321 gh:322*/) => {
         receivedEvent = e;
         receivedZone = Zone.current;
       };

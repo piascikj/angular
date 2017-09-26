@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 export class WikipediaService {
   constructor(private jsonp: Jsonp) { }
 
-  // TODO: Add error handling
+  // TODO: Add error handling id:5 gh:6
   search(term: string) {
 
     let wikiUrl = 'http://en.wikipedia.org/w/api.php';

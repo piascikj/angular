@@ -564,7 +564,7 @@ export class ApplicationRef {
 
   /** @internal */
   ngOnDestroy() {
-    // TODO(alxhub): Dispose of the NgZone.
+    // TODO (alxhub): Dispose of the NgZone. id:133 gh:134
     this._views.slice().forEach((view) => view.destroy());
   }
 

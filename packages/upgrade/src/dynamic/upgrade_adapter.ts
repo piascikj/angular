@@ -380,7 +380,7 @@ export class UpgradeAdapter {
     const upgrade = new UpgradeAdapterRef();
 
     // Make sure resumeBootstrap() only exists if the current bootstrap is deferred
-    const windowAngular = (window as any /** TODO #???? */)['angular'];
+    const windowAngular = (window as any /** TODO #????  id:255 gh:256*/)['angular'];
     windowAngular.resumeBootstrap = undefined;
 
     this.ngZone.run(() => { angular.bootstrap(element, [this.ng1Module.name], config !); });
@@ -555,7 +555,7 @@ export class UpgradeAdapter {
             .then(() => {
               // Note: There is a bug in TS 2.4 that prevents us from
               // inlining this into @NgModule
-              // TODO(tbosch): find or file a bug against TypeScript for this.
+              // TODO (tbosch): find or file a bug against TypeScript for this. id:327 gh:328
               const ngModule = {
                 providers: [
                   {provide: $INJECTOR, useFactory: () => ng1Injector},

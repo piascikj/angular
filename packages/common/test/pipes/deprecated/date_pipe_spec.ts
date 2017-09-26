@@ -22,7 +22,7 @@ export function main() {
       expect(pipe.transform(date, pattern)).toEqual(output);
     }
 
-    // TODO: reactivate the disabled expectations once emulators are fixed in SauceLabs
+    // TODO: reactivate the disabled expectations once emulators are fixed in SauceLabs id:208 gh:209
     // In some old versions of Chrome in Android emulators, time formatting returns dates in the
     // timezone of the VM host,
     // instead of the device timezone. Same symptoms as

@@ -25,7 +25,7 @@ import {getSymbolIterator} from '../util';
  *
  * Changes can be observed by subscribing to the changes `Observable`.
  *
- * NOTE: In the future this class will implement an `Observable` interface.
+ * NOTE: In the future this class will implement an `Observable` interface. id:103 gh:105
  *
  * ### Example ([live demo](http://plnkr.co/edit/RX8sJnQYl9FWuSCWme5z?p=preview))
  * ```typescript

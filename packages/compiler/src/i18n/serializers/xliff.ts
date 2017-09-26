@@ -17,7 +17,7 @@ import * as xml from './xml_helper';
 
 const _VERSION = '1.2';
 const _XMLNS = 'urn:oasis:names:tc:xliff:document:1.2';
-// TODO(vicb): make this a param (s/_/-/)
+// TODO (vicb): make this a param (s/_/-/) id:287 gh:288
 const _DEFAULT_SOURCE_LANG = 'en';
 const _PLACEHOLDER_TAG = 'x';
 
@@ -168,7 +168,7 @@ class _WriteVisitor implements i18n.Visitor {
   }
 }
 
-// TODO(vicb): add error management (structure)
+// TODO (vicb): add error management (structure) id:88 gh:89
 // Extract messages as xml nodes from the xliff file
 class XliffParser implements ml.Visitor {
   private _unitMlString: string|null;
@@ -235,7 +235,7 @@ class XliffParser implements ml.Visitor {
         break;
 
       default:
-        // TODO(vicb): assert file structure, xliff version
+        // TODO (vicb): assert file structure, xliff version id:152 gh:153
         // For now only recurse on unhandled nodes
         ml.visitAll(this, element.children, null);
     }

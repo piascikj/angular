@@ -35,7 +35,7 @@ export abstract class TemplateRef<C> {
    * data-binding and injection context from the original location.
    *
    */
-  // TODO(i): rename to anchor or location
+  // TODO (i): rename to anchor or location id:293 gh:294
   abstract get elementRef(): ElementRef;
 
   abstract createEmbeddedView(context: C): EmbeddedViewRef<C>;

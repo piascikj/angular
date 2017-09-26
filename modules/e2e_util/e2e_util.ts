@@ -54,7 +54,7 @@ export function openBrowser(config: {
  * @experimental This API will be moved to Protractor.
  */
 export function verifyNoBrowserErrors() {
-  // TODO(tbosch): Bug in ChromeDriver: Need to execute at least one command
+  // TODO (tbosch): Bug in ChromeDriver: Need to execute at least one command id:32 gh:33
   // so that the browser logs can be read out!
   browser.executeScript('1+1');
   browser.manage().logs().get('browser').then(function(browserLog: any) {

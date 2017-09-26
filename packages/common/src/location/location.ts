@@ -63,7 +63,7 @@ export class Location {
   /**
    * Returns the normalized URL path.
    */
-  // TODO: vsavkin. Remove the boolean flag and always include hash once the deprecated router is
+  // TODO: vsavkin. Remove the boolean flag and always include hash once the deprecated router is id:204 gh:205
   // removed.
   path(includeHash: boolean = false): string {
     return this.normalize(this._platformStrategy.path(includeHash));
@@ -97,7 +97,7 @@ export class Location {
     return this._platformStrategy.prepareExternalUrl(url);
   }
 
-  // TODO: rename this method to pushState
+  // TODO: rename this method to pushState id:61 gh:62
   /**
    * Changes the browsers URL to the normalized version of the given URL, and pushes a
    * new item onto the platform's history.

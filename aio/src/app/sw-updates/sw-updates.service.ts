@@ -59,7 +59,7 @@ export class SwUpdatesService implements OnDestroy {
     this.log('Checking for update...');
     this.sw.checkForUpdate()
         // Temp workaround for https://github.com/angular/mobile-toolkit/pull/137.
-        // TODO (gkalpak): Remove once #137 is fixed.
+        // TODO (gkalpak): Remove once #137 is fixed. id:28 gh:29
         .concat(Observable.of(false)).take(1)
         .do(v => this.log(`Update available: ${v}`))
         .subscribe(v => v ? this.activateUpdate() : this.scheduleCheckForUpdate());

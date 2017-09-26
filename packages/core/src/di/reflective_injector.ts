@@ -152,7 +152,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Parent of this injector.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:292 gh:293
    * -->
    *
    * ### Example ([live demo](http://plnkr.co/edit/eosMGo?p=preview))
@@ -168,7 +168,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Resolves an array of providers and creates a child injector from those providers.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:98 gh:99
    * -->
    *
    * The passed-in providers can be an array of `Type`, {@link Provider},
@@ -197,7 +197,7 @@ export abstract class ReflectiveInjector implements Injector {
   /**
    * Creates a child injector from previously resolved providers.
    *
-   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection.
+   * <!-- TODO: Add a link to the section of the user guide talking about hierarchical injection. id:162 gh:163
    * -->
    *
    * This API is the recommended way to construct injectors in performance-sensitive parts.

@@ -67,9 +67,9 @@ export function main() {
            }));
 
         it('should allow the use of fakeAsync',
-           fakeAsync(inject([FancyService], (service: any /** TODO #9100 */) => {
-             let value: any /** TODO #9100 */;
-             service.getAsyncValue().then(function(val: any /** TODO #9100 */) { value = val; });
+           fakeAsync(inject([FancyService], (service: any /** TODO #9100  id:312 gh:313*/) => {
+             let value: any /** TODO #9100  id:149 gh:150*/;
+             service.getAsyncValue().then(function(val: any /** TODO #9100  id:224 gh:225*/) { value = val; });
              tick();
              expect(value).toEqual('async value');
            })));
@@ -87,9 +87,9 @@ export function main() {
           reject = rej;
         });
         originalJasmineIt = jasmine.getEnv().it;
-        jasmine.getEnv().it = (description: string, fn: any /** TODO #9100 */): any => {
+        jasmine.getEnv().it = (description: string, fn: any /** TODO #9100  id:231 gh:232*/): any => {
           const done = () => { resolve(null); };
-          (<any>done).fail = (err: any /** TODO #9100 */) => { reject(err); };
+          (<any>done).fail = (err: any /** TODO #9100  id:202 gh:203*/) => { reject(err); };
           fn(done);
           return null;
         };
@@ -98,7 +98,7 @@ export function main() {
 
       const restoreJasmineIt = () => { jasmine.getEnv().it = originalJasmineIt; };
 
-      it('should fail when an ResourceLoader fails', (done: any /** TODO #9100 */) => {
+      it('should fail when an ResourceLoader fails', (done: any /** TODO #9100  id:313 gh:314*/) => {
         const itPromise = patchJasmineIt();
 
         it('should fail with an error from a promise', async(() => {

@@ -85,7 +85,7 @@ module.exports = new Package('angular-api', [basePackage, typeScriptPackage])
         parseTagsProcessor.tagDefinitions.concat(getInjectables(requireFolder(__dirname, './tag-defs')));
 
     // We actually don't want to parse param docs in this package as we are getting the data out using TS
-    // TODO: rewire the param docs to the params extracted from TS
+    // TODO: rewire the param docs to the params extracted from TS id:48 gh:49
     parseTagsProcessor.tagDefinitions.forEach(function(tagDef) {
       if (tagDef.name === 'param') {
         tagDef.docProperty = 'paramData';

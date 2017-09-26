@@ -406,7 +406,7 @@ export function main() {
 
     describe('blocks', () => {
       it('should console.warn if we use i18n comments', () => {
-        // TODO(ocombe): expect a warning message when we have a proper log service
+        // TODO (ocombe): expect a warning message when we have a proper log service id:94 gh:95
         extract('<!-- i18n --><p><b i18n-title="m|d" title="msg"></b></p><!-- /i18n -->');
       });
 

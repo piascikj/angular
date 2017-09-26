@@ -293,7 +293,7 @@ export function main() {
         expect(new DatePipe('hu').transform(date, 'a')).toEqual('de.');
         expect(new DatePipe('sr').transform(date, 'a')).toEqual('пре подне');
 
-        // TODO(ocombe): activate this test when we support local numbers
+        // TODO (ocombe): activate this test when we support local numbers id:64 gh:65
         // expect(new DatePipe('mr', [localeMr]).transform(date, 'hh')).toEqual('०९');
       });
 

@@ -13,7 +13,7 @@
  * chromedriver 2.15. However, angular need to test against Dartium, which
  * is an old version of Chromium which is incompatible with Chromedriver > 2.14.
  *
- * TODO(juliemr): Remove this script once Dartium has been updated.
+ * TODO (juliemr): Remove this script once Dartium has been updated. id:279 gh:280
  */
 var fs = require('fs');
 var path = require('path');

@@ -244,7 +244,7 @@ export class Router {
   /**
    * Creates the router service.
    */
-  // TODO: vsavkin make internal after the final is out.
+  // TODO: vsavkin make internal after the final is out. id:267 gh:268
   constructor(
       private rootComponentType: Type<any>|null, private urlSerializer: UrlSerializer,
       private rootContexts: ChildrenOutletContexts, private location: Location, injector: Injector,
@@ -265,11 +265,11 @@ export class Router {
 
   /**
    * @internal
-   * TODO: this should be removed once the constructor of the router made internal
+   * TODO: this should be removed once the constructor of the router made internal id:243 gh:244
    */
   resetRootComponentType(rootComponentType: Type<any>): void {
     this.rootComponentType = rootComponentType;
-    // TODO: vsavkin router 4.0 should make the root component set to null
+    // TODO: vsavkin router 4.0 should make the root component set to null id:324 gh:325
     // this will simplify the lifecycle of the router.
     this.routerState.root.component = this.rootComponentType;
   }

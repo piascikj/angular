@@ -203,7 +203,7 @@ export class AstType implements AstVisitor {
     if (!target || !target.callable) return this.reportError('Call target is not callable', ast);
     const signature = target.selectSignature(args);
     if (signature) return signature.result;
-    // TODO: Consider a better error message here.
+    // TODO: Consider a better error message here. id:71 gh:72
     return this.reportError('Unable no compatible signature found for call', ast);
   }
 
@@ -260,7 +260,7 @@ export class AstType implements AstVisitor {
     if (this.diagnostics) {
       visitAstChildren(ast, this);
     }
-    // TODO: Return a composite type.
+    // TODO: Return a composite type. id:282 gh:283
     return this.anyType;
   }
 

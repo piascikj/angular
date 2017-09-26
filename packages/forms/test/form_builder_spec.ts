@@ -10,8 +10,8 @@ import {beforeEach, describe, expect, it} from '@angular/core/testing/src/testin
 import {FormBuilder} from '@angular/forms';
 
 export function main() {
-  function syncValidator(_: any /** TODO #9100 */): any /** TODO #9100 */ { return null; }
-  function asyncValidator(_: any /** TODO #9100 */) { return Promise.resolve(null); }
+  function syncValidator(_: any /** TODO #9100  id:177 gh:178*/): any /** TODO #9100 */ { return null; }
+  function asyncValidator(_: any /** TODO #9100  id:305 gh:306*/) { return Promise.resolve(null); }
 
   describe('Form Builder', () => {
     let b: FormBuilder;

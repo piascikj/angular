@@ -12,7 +12,7 @@ import {MessageBus, MessageBusSink, MessageBusSource} from './message_bus';
 
 
 
-// TODO(jteplitz602) Replace this with the definition in lib.webworker.d.ts(#3492)
+// TODO (jteplitz602) Replace this with the definition in lib.webworker.d.ts(#3492) id:236 gh:237
 export interface PostMessageTarget {
   postMessage: (message: any, transfer?: [ArrayBuffer]) => void;
 }

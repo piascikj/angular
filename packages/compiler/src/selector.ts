@@ -330,8 +330,8 @@ export class SelectorMatcher {
     if (!nestedSelector) {
       return false;
     }
-    // TODO(perf): get rid of recursion and measure again
-    // TODO(perf): don't pass the whole selector into the recursion,
+    // TODO (perf): get rid of recursion and measure again id:90 gh:91
+    // TODO (perf): don't pass the whole selector into the recursion, id:154 gh:155
     // but only the not processed parts
     return nestedSelector.match(cssSelector, matchedCallback);
   }

@@ -177,7 +177,7 @@ export function syncPendingControls(form: FormGroup, directives: NgControl[]): v
   });
 }
 
-// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented
+// TODO: vsavkin remove it once https://github.com/angular/angular/issues/3011 is implemented id:128 gh:129
 export function selectValueAccessor(
     dir: NgControl, valueAccessors: ControlValueAccessor[]): ControlValueAccessor|null {
   if (!valueAccessors) return null;

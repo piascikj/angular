@@ -39,7 +39,7 @@ export function main() {
 
   function otherAsyncValidator() { return Promise.resolve({'other': true}); }
 
-  function syncValidator(_: any /** TODO #9100 */): any /** TODO #9100 */ { return null; }
+  function syncValidator(_: any /** TODO #9100  id:137 gh:138*/): any /** TODO #9100 */ { return null; }
 
   describe('FormControl', () => {
     it('should default the value to null', () => {
@@ -773,7 +773,7 @@ export function main() {
       it('should fire an event after the status has been updated to pending', fakeAsync(() => {
            const c = new FormControl('old', Validators.required, asyncValidator('expected'));
 
-           const log: any[] /** TODO #9100 */ = [];
+           const log: any[] /** TODO #9100  id:203 gh:204*/ = [];
            c.valueChanges.subscribe({next: (value: any) => log.push(`value: '${value}'`)});
 
            c.statusChanges.subscribe({next: (status: any) => log.push(`status: '${status}'`)});
@@ -799,10 +799,10 @@ export function main() {
            ]);
          }));
 
-      // TODO: remove the if statement after making observable delivery sync
+      // TODO: remove the if statement after making observable delivery sync id:212 gh:213
       it('should update set errors and status before emitting an event',
          inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
-           c.valueChanges.subscribe((value: any /** TODO #9100 */) => {
+           c.valueChanges.subscribe((value: any /** TODO #9100  id:180 gh:181*/) => {
              expect(c.valid).toEqual(false);
              expect(c.errors).toEqual({'required': true});
              async.done();

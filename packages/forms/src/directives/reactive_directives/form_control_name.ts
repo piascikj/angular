@@ -86,7 +86,7 @@ export class FormControlName extends NgControl implements OnChanges, OnDestroy {
 
   @Input('formControlName') name: string;
 
-  // TODO(kara):  Replace ngModel with reactive API
+  // TODO (kara):  Replace ngModel with reactive API id:195 gh:196
   @Input('ngModel') model: any;
   @Output('ngModelChange') update = new EventEmitter();
   @Input('disabled')

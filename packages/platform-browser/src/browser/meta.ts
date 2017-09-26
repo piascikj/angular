@@ -25,7 +25,7 @@ export type MetaDefinition = {
   url?: string;
 } &
 {
-  // TODO(IgorMinar): this type looks wrong
+  // TODO (IgorMinar): this type looks wrong id:314 gh:315
   [prop: string]: string;
 };
 

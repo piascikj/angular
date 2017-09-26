@@ -180,7 +180,7 @@ class _Visitor implements html.Visitor {
           if (!i18nCommentsWarned && <any>console && <any>console.warn) {
             i18nCommentsWarned = true;
             const details = comment.sourceSpan.details ? `, ${comment.sourceSpan.details}` : '';
-            // TODO(ocombe): use a log service once there is a public one available
+            // TODO (ocombe): use a log service once there is a public one available id:150 gh:151
             console.warn(
                 `I18n comments are deprecated, use an <ng-container> element instead (${comment.sourceSpan.start}${details})`);
           }

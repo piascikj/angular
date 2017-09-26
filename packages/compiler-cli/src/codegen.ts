@@ -36,7 +36,7 @@ export interface CodeGeneratorI18nOptions {
   missingTranslation: string|null;
 }
 
-// TODO(tbosch): remove this once G3 uses the transformer compiler!
+// TODO (tbosch): remove this once G3 uses the transformer compiler! id:77 gh:78
 export class CodeGenerator {
   constructor(
       private options: CompilerOptions, private program: ts.Program, public host: ts.CompilerHost,

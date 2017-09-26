@@ -491,7 +491,7 @@ export function main() {
            const adapter: UpgradeAdapter = new UpgradeAdapter(forwardRef(() => Ng2Module));
            const ng1Module = angular.module('ng1', []);
 
-           ng1Module.run(($rootScope: any /** TODO #9100 */) => { $rootScope.modelA = 'A'; });
+           ng1Module.run(($rootScope: any /** TODO #9100  id:274 gh:275*/) => { $rootScope.modelA = 'A'; });
 
            let ng2Instance: Ng2;
            @Component({selector: 'ng2', template: '{{_value}}'})

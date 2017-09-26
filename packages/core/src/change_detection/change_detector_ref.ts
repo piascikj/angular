@@ -13,7 +13,7 @@ export abstract class ChangeDetectorRef {
   /**
    * Marks all {@link ChangeDetectionStrategy#OnPush} ancestors as to be checked.
    *
-   * <!-- TODO: Add a link to a chapter on OnPush components -->
+   * <!-- TODO: Add a link to a chapter on OnPush components --> id:96 gh:97
    *
    * ### Example ([live demo](http://plnkr.co/edit/GC512b?p=preview))
    *
@@ -57,8 +57,8 @@ export abstract class ChangeDetectorRef {
    * local change
    * detection checks.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:290 gh:291
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:95 gh:96
    *
    * ### Example
    *
@@ -110,8 +110,8 @@ export abstract class ChangeDetectorRef {
    * change detection
    * checks.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
-   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:157 gh:158
+   * <!-- TODO: Add a live demo once ref.detectChanges is merged into master --> id:160 gh:161
    *
    * ### Example
    *
@@ -141,7 +141,7 @@ export abstract class ChangeDetectorRef {
    * This also marks OnPush ancestors as to be checked. This reattached change detector will be
    * checked during the next change detection run.
    *
-   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest -->
+   * <!-- TODO: Add a link to a chapter on detach/reattach/local digest --> id:99 gh:100
    *
    * ### Example ([live demo](http://plnkr.co/edit/aUhZha?p=preview))
    *

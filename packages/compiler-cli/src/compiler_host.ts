@@ -253,7 +253,7 @@ export interface CompilerHostContext extends ts.ModuleResolutionHost {
   assumeFileExists(fileName: string): void;
 }
 
-// TODO(tbosch): remove this once G3 uses the transformer compiler!
+// TODO (tbosch): remove this once G3 uses the transformer compiler! id:68 gh:69
 export class CompilerHost extends BaseAotCompilerHost<CompilerHostContext> {
   protected metadataProvider: MetadataCollector;
   protected basePath: string;
@@ -381,7 +381,7 @@ export class CompilerHost extends BaseAotCompilerHost<CompilerHostContext> {
    * generated     | relative |   relative  |   n/a
    * existing file |   n/a    |   absolute  |  relative(*)
    *
-   * NOTE: (*) the relative path is computed depending on `isGenDirChildOfRootDir`.
+   * NOTE: (*) the relative path is computed depending on `isGenDirChildOfRootDir`. id:281 gh:282
    */
   fileNameToModuleName(importedFile: string, containingFile: string): string {
     const importAs = this.getImportAs(importedFile);
@@ -483,7 +483,7 @@ export class ModuleResolutionHostAdapter extends CompilerHostContextAdapter impl
 
   readResource(s: string) {
     if (!this.host.fileExists(s)) {
-      // TODO: We should really have a test for error cases like this!
+      // TODO: We should really have a test for error cases like this! id:70 gh:71
       throw new Error(`Compilation failed. Resource file not found: ${s}`);
     }
     return Promise.resolve(this.host.readFile(s));
@@ -508,7 +508,7 @@ export class NodeCompilerHostContext extends CompilerHostContextAdapter implemen
 
   readResource(s: string) {
     if (!this.fileExists(s)) {
-      // TODO: We should really have a test for error cases like this!
+      // TODO: We should really have a test for error cases like this! id:140 gh:141
       throw new Error(`Compilation failed. Resource file not found: ${s}`);
     }
     return Promise.resolve(this.readFile(s));

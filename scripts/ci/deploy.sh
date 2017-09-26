@@ -16,7 +16,7 @@ fi
 
 
 # Don't deploy if not running against angular/angular
-# TODO(i): because we don't let deploy to run outside of angular/angular folks can't use their
+# TODO (i): because we don't let deploy to run outside of angular/angular folks can't use their id:328 gh:329
 #   private travis build to deploy anywhere. This is likely ok, but this means that @alexeagle's
 #   fancy setup to publish ES2015 packages to github -build repos no longer works. This is ok
 #   since with flat modules we'll have this feature built-in. We should still go and remove

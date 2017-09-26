@@ -29,7 +29,7 @@ export abstract class ConnectionBackend { abstract createConnection(request: any
 export abstract class Connection {
   readyState: ReadyState;
   request: Request;
-  response: any;  // TODO: generic of <Response>;
+  response: any;  // TODO: generic of <Response>; id:185 gh:186
 }
 
 /**

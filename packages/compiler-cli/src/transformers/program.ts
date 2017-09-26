@@ -65,7 +65,7 @@ class AngularCompilerProgram implements Program {
     if (options.flatModuleOutFile) {
       const {host: bundleHost, indexName, errors} = createBundleIndexHost(options, rootNames, host);
       if (errors) {
-        // TODO(tbosch): once we move MetadataBundler from tsc_wrapped into compiler_cli,
+        // TODO (tbosch): once we move MetadataBundler from tsc_wrapped into compiler_cli, id:81 gh:82
         // directly create ng.Diagnostic instead of using ts.Diagnostic here.
         this._optionsDiagnostics.push(...errors.map(e => ({
                                                       category: e.category,
@@ -292,7 +292,7 @@ class AngularCompilerProgram implements Program {
       (srcFileName: string) => string {
     let srcToOutPath: (srcFileName: string) => string;
     if (this.options.outDir) {
-      // TODO(tbosch): talk to TypeScript team to expose their logic for calculating the `rootDir`
+      // TODO (tbosch): talk to TypeScript team to expose their logic for calculating the `rootDir` id:146 gh:147
       // if none was specified.
       if (outSrcMappings.length === 0) {
         throw new Error(`Can't calculate the rootDir without at least one outSrcMapping. `);
@@ -436,7 +436,7 @@ class AngularCompilerProgram implements Program {
       const genFiles = this.compiler.emitAllImpls(this.analyzedModules);
       return {genFiles, genDiags: []};
     } catch (e) {
-      // TODO(tbosch): check whether we can actually have syntax errors here,
+      // TODO (tbosch): check whether we can actually have syntax errors here, id:89 gh:90
       // as we already parsed the metadata and templates before to create the type check block.
       if (isSyntaxError(e)) {
         const genDiags: ts.Diagnostic[] = [{

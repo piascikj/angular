@@ -13,7 +13,7 @@ const DIRECTIVE_PREFIX_REGEXP = /^(?:x|data)[:\-_]/i;
 const DIRECTIVE_SPECIAL_CHARS_REGEXP = /[:\-_]+(.)/g;
 
 export function onError(e: any) {
-  // TODO: (misko): We seem to not have a stack trace here!
+  // TODO: (misko): We seem to not have a stack trace here! id:273 gh:274
   if (console.error) {
     console.error(e, e.stack);
   } else {

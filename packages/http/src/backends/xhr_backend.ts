@@ -87,7 +87,7 @@ export class XHRConnection implements Connection {
         response.ok = isSuccess(status);
         if (response.ok) {
           responseObserver.next(response);
-          // TODO(gdi2290): defer complete if array buffer until done
+          // TODO (gdi2290): defer complete if array buffer until done id:138 gh:139
           responseObserver.complete();
           return;
         }
@@ -150,7 +150,7 @@ export class XHRConnection implements Connection {
     });
   }
 
-  setDetectedContentType(req: any /** TODO Request */, _xhr: any /** XMLHttpRequest */) {
+  setDetectedContentType(req: any /** TODO Request  id:206 gh:207*/, _xhr: any /** XMLHttpRequest */) {
     // Skip if a custom Content-Type header is provided
     if (req.headers != null && req.headers.get('Content-Type') != null) {
       return;

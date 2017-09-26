@@ -14,7 +14,7 @@ export interface AotCompilerOptions {
   translations?: string;
   missingTranslation?: MissingTranslationStrategy;
   enableLegacyTemplate?: boolean;
-  /** TODO(tbosch): remove this flag as it is always on in the new ngc */
+  /** TODO (tbosch): remove this flag as it is always on in the new ngc  id:84 gh:85*/
   enableSummariesForJit?: boolean;
   preserveWhitespaces?: boolean;
   fullTemplateTypeCheck?: boolean;

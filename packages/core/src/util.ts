@@ -10,12 +10,12 @@
 // added to the type-checker, without emitting any runtime module load statement
 import {} from 'zone.js';
 
-// TODO(jteplitz602): Load WorkerGlobalScope from lib.webworker.d.ts file #3492
-declare var WorkerGlobalScope: any /** TODO #9100 */;
+// TODO (jteplitz602): Load WorkerGlobalScope from lib.webworker.d.ts file #3492 id:107 gh:108
+declare var WorkerGlobalScope: any /** TODO #9100  id:295 gh:296*/;
 // CommonJS / Node have global context exposed as "global" variable.
 // We don't want to include the whole node.d.ts this this compilation unit so we'll just fake
 // the global "global" var for now.
-declare var global: any /** TODO #9100 */;
+declare var global: any /** TODO #9100  id:104 gh:104*/;
 const __window = typeof window !== 'undefined' && window;
 const __self = typeof self !== 'undefined' && typeof WorkerGlobalScope !== 'undefined' &&
     self instanceof WorkerGlobalScope && self;

@@ -129,7 +129,7 @@ _global.beforeEach(function() {
           }
           return pass;
         } else {
-          // TODO(misko): we should change the return, but jasmine.d.ts is not null safe
+          // TODO (misko): we should change the return, but jasmine.d.ts is not null safe id:260 gh:261
           return undefined !;
         }
       }

@@ -459,7 +459,7 @@ export class AnimationTimelineContext {
     const newOptions = options as any;
     let optionsToUpdate = this.options;
 
-    // NOTE: this will get patched up when other animation methods support duration overrides
+    // NOTE: this will get patched up when other animation methods support duration overrides id:35 gh:36
     if (newOptions.duration != null) {
       (optionsToUpdate as any).duration = resolveTimingValue(newOptions.duration);
     }

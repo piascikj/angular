@@ -215,7 +215,7 @@ export class CssScanner {
 
     let isMatchingType: boolean = false;
     if (type == CssTokenType.IdentifierOrNumber) {
-      // TODO (matsko): implement array traversal for lookup here
+      // TODO (matsko): implement array traversal for lookup here id:286 gh:287
       isMatchingType = next.type == CssTokenType.Number || next.type == CssTokenType.Identifier;
     } else {
       isMatchingType = next.type == type;

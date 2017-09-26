@@ -14,7 +14,7 @@ import {RequestArgs} from './interfaces';
 import {URLSearchParams} from './url_search_params';
 
 
-// TODO(jeffbcross): properly implement body accessors
+// TODO (jeffbcross): properly implement body accessors id:308 gh:309
 /**
  * Creates `Request` instances from provided values.
  *
@@ -73,7 +73,7 @@ export class Request extends Body {
   responseType: ResponseContentType;
   constructor(requestOptions: RequestArgs) {
     super();
-    // TODO: assert that url is present
+    // TODO: assert that url is present id:141 gh:142
     const url = requestOptions.url;
     this.url = requestOptions.url !;
     const paramsArg = requestOptions.params || requestOptions.search;
@@ -89,13 +89,13 @@ export class Request extends Body {
         if (this.url.indexOf('?') != -1) {
           prefix = (this.url[this.url.length - 1] == '&') ? '' : '&';
         }
-        // TODO: just delete search-query-looking string in url?
+        // TODO: just delete search-query-looking string in url? id:213 gh:214
         this.url = url + prefix + params;
       }
     }
     this._body = requestOptions.body;
     this.method = normalizeMethodName(requestOptions.method !);
-    // TODO(jeffbcross): implement behavior
+    // TODO (jeffbcross): implement behavior id:220 gh:221
     // Defaults to 'omit', consistent with browser
     this.headers = new Headers(requestOptions.headers);
     this.contentType = this.detectContentType();
@@ -184,7 +184,7 @@ function urlEncodeParams(params: {[key: string]: any}): URLSearchParams {
 
 const noop = function() {};
 const w = typeof window == 'object' ? window : noop;
-const FormData = (w as any /** TODO #9100 */)['FormData'] || noop;
-const Blob = (w as any /** TODO #9100 */)['Blob'] || noop;
+const FormData = (w as any /** TODO #9100  id:188 gh:189*/)['FormData'] || noop;
+const Blob = (w as any /** TODO #9100  id:309 gh:310*/)['Blob'] || noop;
 export const ArrayBuffer: ArrayBufferConstructor =
-    (w as any /** TODO #9100 */)['ArrayBuffer'] || noop;
+    (w as any /** TODO #9100  id:143 gh:144*/)['ArrayBuffer'] || noop;

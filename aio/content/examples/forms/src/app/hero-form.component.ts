@@ -22,7 +22,7 @@ export class HeroFormComponent {
   // #enddocregion submitted
 
   // #enddocregion final
-  // TODO: Remove this when we're done
+  // TODO: Remove this when we're done id:4 gh:5
   get diagnostic() { return JSON.stringify(this.model); }
   // #enddocregion v1
 

@@ -128,7 +128,7 @@ export class TypeScriptServiceHost implements LanguageServiceHost {
       }
     } else {
       this.ensureTemplateMap();
-      // TODO: Cannocalize the file?
+      // TODO: Cannocalize the file? id:196 gh:197
       const componentType = this.fileToComponent !.get(fileName);
       if (componentType) {
         return this.getSourceFromType(
@@ -460,7 +460,7 @@ export class TypeScriptServiceHost implements LanguageServiceHost {
     if (parentNode.kind !== ts.SyntaxKind.PropertyAssignment) {
       return TypeScriptServiceHost.missingTemplate;
     } else {
-      // TODO: Is this different for a literal, i.e. a quoted property name like "template"?
+      // TODO: Is this different for a literal, i.e. a quoted property name like "template"? id:311 gh:312
       if ((parentNode as any).name.text !== 'template') {
         return TypeScriptServiceHost.missingTemplate;
       }

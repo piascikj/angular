@@ -173,7 +173,7 @@ class SanitizingHtmlSerializer {
         this.sanitizedSomething = true;
         return;
       }
-      // TODO(martinprobst): Special case image URIs for data:image/...
+      // TODO (martinprobst): Special case image URIs for data:image/... id:234 gh:235
       if (URI_ATTRS[lower]) value = sanitizeUrl(value);
       if (SRCSET_ATTRS[lower]) value = sanitizeSrcset(value);
       this.buf.push(' ');

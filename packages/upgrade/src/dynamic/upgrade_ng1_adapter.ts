@@ -40,7 +40,7 @@ export class UpgradeNg1ComponentAdapterBuilder {
 
     // Note: There is a bug in TS 2.4 that prevents us from
     // inlining this into @Directive
-    // TODO(tbosch): find or file a bug against TypeScript for this.
+    // TODO (tbosch): find or file a bug against TypeScript for this. id:246 gh:247
     const directive = {selector: selector, inputs: this.inputsRename, outputs: this.outputsRename};
 
     @Directive(directive)

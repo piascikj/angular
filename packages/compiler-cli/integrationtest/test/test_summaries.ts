@@ -33,7 +33,7 @@ function main() {
       if (/.*\/node_modules\/.*/.test(fileName) && !/.*ngsummary\.json$/.test(fileName) &&
           !/package\.json$/.test(fileName)) {
         // Only allow to read summaries and package.json files from node_modules
-        // TODO (mhevery): Fix this. TypeScript.d.ts does not allow returning null.
+        // TODO (mhevery): Fix this. TypeScript.d.ts does not allow returning null. id:67 gh:68
         return null !;
       }
       readFiles.push(path.relative(basePath, fileName));
@@ -92,7 +92,7 @@ function codegen(
     hostContextFactory: (host: ts.CompilerHost) => CompilerHostContext) {
   const host = ts.createCompilerHost(config.options, true);
 
-  // HACK: patch the realpath to solve symlink issue here:
+  // HACK: patch the realpath to solve symlink issue here: id:135 gh:136
   // https://github.com/Microsoft/TypeScript/issues/9552
   // todo(misko): remove once facade symlinks are removed
   host.realpath = (path) => path;

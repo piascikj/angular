@@ -670,7 +670,7 @@ class NeedsContentChild implements AfterContentInit, AfterContentChecked {
   }
 
   get child() { return this._child; }
-  logs: any[] /** TODO #9100 */ = [];
+  logs: any[] /** TODO #9100  id:118 gh:119*/ = [];
 
   ngAfterContentInit() { this.logs.push(['init', this.child ? this.child.text : null]); }
 
@@ -696,7 +696,7 @@ class NeedsViewChild implements AfterViewInit, AfterViewChecked {
   }
 
   get child() { return this._child; }
-  logs: any[] /** TODO #9100 */ = [];
+  logs: any[] /** TODO #9100  id:299 gh:300*/ = [];
 
   ngAfterViewInit() { this.logs.push(['init', this.child ? this.child.text : null]); }
 

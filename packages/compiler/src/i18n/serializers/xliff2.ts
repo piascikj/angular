@@ -17,7 +17,7 @@ import * as xml from './xml_helper';
 
 const _VERSION = '2.0';
 const _XMLNS = 'urn:oasis:names:tc:xliff:document:2.0';
-// TODO(vicb): make this a param (s/_/-/)
+// TODO (vicb): make this a param (s/_/-/) id:125 gh:126
 const _DEFAULT_SOURCE_LANG = 'en';
 const _PLACEHOLDER_TAG = 'ph';
 const _PLACEHOLDER_SPANNING_TAG = 'pc';

@@ -97,7 +97,7 @@ class I18nToHtmlVisitor implements i18n.Visitor {
   visitIcu(icu: i18n.Icu, context?: any): any {
     const cases = Object.keys(icu.cases).map(k => `${k} {${icu.cases[k].visit(this)}}`);
 
-    // TODO(vicb): Once all format switch to using expression placeholders
+    // TODO (vicb): Once all format switch to using expression placeholders id:91 gh:92
     // we should throw when the placeholder is not in the source message
     const exp = this._srcMsg.placeholders.hasOwnProperty(icu.expression) ?
         this._srcMsg.placeholders[icu.expression] :

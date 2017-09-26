@@ -21,7 +21,7 @@ module.exports = function processNavigationMap(versionInfo, log) {
         log.error(`Navigation doc: ${navigationDoc.fileInfo.relativePath} contains invalid urls`);
         // eslint-disable-next-line no-console
         console.log(errors);
-        // TODO(petebd): fail if there are errors: throw new Error('processNavigationMap failed');
+        // TODO (petebd): fail if there are errors: throw new Error('processNavigationMap failed'); id:17 gh:18
       }
 
       // Add in the version data in a "secret" field to be extracted in the docs app

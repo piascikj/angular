@@ -10,7 +10,7 @@ import {DebugElement} from '@angular/core';
 import {AnimateCmp} from '../src/animate';
 import {createComponent} from './util';
 
-// TODO(matsko): make this green again...
+// TODO (matsko): make this green again... id:75 gh:76
 xdescribe('template codegen output', () => {
   function findTargetElement(elm: DebugElement): DebugElement {
     // the open-close-container is a child of the main container

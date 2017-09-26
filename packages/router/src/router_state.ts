@@ -131,7 +131,7 @@ export class ActivatedRoute {
       /** The outlet name of the route. It's a constant */
       public outlet: string,
       /** The component of the route. It's a constant */
-      // TODO(vsavkin): remove |string
+      // TODO (vsavkin): remove |string id:268 gh:269
       public component: Type<any>|string|null, futureSnapshot: ActivatedRouteSnapshot) {
     this._futureSnapshot = futureSnapshot;
   }

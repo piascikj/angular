@@ -238,7 +238,7 @@ export function create(info: any /* ts.server.PluginCreateInfo */): ts.LanguageS
 
   proxy.getQuickInfoAtPosition = function(fileName: string, position: number): ts.QuickInfo {
     let base = oldLS.getQuickInfoAtPosition(fileName, position);
-    // TODO(vicb): the tags property has been removed in TS 2.2
+    // TODO (vicb): the tags property has been removed in TS 2.2 id:226 gh:227
     tryOperation('get quick info', () => {
       const ours = ls.getHoverAt(fileName, position);
       if (ours) {

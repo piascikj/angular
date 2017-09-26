@@ -21,7 +21,7 @@ const initialDocViewerContent = initialDocViewerElement ? initialDocViewerElemen
 @Component({
   selector: 'aio-doc-viewer',
   template: ''
-  // TODO(robwormald): shadow DOM and emulated don't work here (?!)
+  // TODO (robwormald): shadow DOM and emulated don't work here (?!) id:43 gh:44
   // encapsulation: ViewEncapsulation.Native
 })
 export class DocViewerComponent implements DoCheck, OnDestroy {
@@ -75,7 +75,7 @@ export class DocViewerComponent implements DoCheck, OnDestroy {
 
     this.addTitleAndToc(doc.id);
 
-    // TODO(i): why can't I use for-of? why doesn't typescript like Map#value() iterators?
+    // TODO (i): why can't I use for-of? why doesn't typescript like Map#value() iterators? id:13 gh:14
     this.embeddedComponentFactories.forEach(({ contentPropertyName, factory }, selector) => {
       const embeddedComponentElements = this.hostElement.querySelectorAll(selector);
 

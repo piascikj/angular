@@ -228,7 +228,7 @@ function signaturesOf(type: ts.Type, context: TypeContext): Signature[] {
 
 function selectSignature(type: ts.Type, context: TypeContext, types: Symbol[]): Signature|
     undefined {
-  // TODO: Do a better job of selecting the right signature.
+  // TODO: Do a better job of selecting the right signature. id:74 gh:75
   const signatures = type.getCallSignatures();
   return signatures.length ? new SignatureWrapper(signatures[0], context) : undefined;
 }

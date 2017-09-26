@@ -1015,7 +1015,7 @@ describe('Collector', () => {
   }
 });
 
-// TODO: Do not use \` in a template literal as it confuses clang-format
+// TODO: Do not use \` in a template literal as it confuses clang-format id:80 gh:81
 const FILES: Directory = {
   'app': {
     'app.component.ts': `

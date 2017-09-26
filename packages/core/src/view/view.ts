@@ -336,7 +336,7 @@ export function checkNoChangesView(view: ViewData) {
   Services.updateRenderer(view, CheckType.CheckNoChanges);
   execComponentViewsAction(view, ViewAction.CheckNoChanges);
   // Note: We don't check queries for changes as we didn't do this in v2.x.
-  // TODO(tbosch): investigate if we can enable the check again in v5.x with a nicer error message.
+  // TODO (tbosch): investigate if we can enable the check again in v5.x with a nicer error message. id:178 gh:179
   view.state &= ~(ViewState.CheckProjectedViews | ViewState.CheckProjectedView);
 }
 

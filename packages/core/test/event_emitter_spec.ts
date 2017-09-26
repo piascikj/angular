@@ -61,7 +61,7 @@ export function main() {
 
     it('delivers next and error events synchronously',
        inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
-         const log: any[] /** TODO #9100 */ = [];
+         const log: any[] /** TODO #9100  id:109 gh:110*/ = [];
 
          emitter.subscribe({
            next: (x: any) => {
@@ -82,7 +82,7 @@ export function main() {
        }));
 
     it('delivers next and complete events synchronously', () => {
-      const log: any[] /** TODO #9100 */ = [];
+      const log: any[] /** TODO #9100  id:176 gh:177*/ = [];
 
       emitter.subscribe({
         next: (x: any) => {
@@ -106,7 +106,7 @@ export function main() {
     it('delivers events asynchronously when forced to async mode',
        inject([AsyncTestCompleter], (async: AsyncTestCompleter) => {
          const e = new EventEmitter(true);
-         const log: any[] /** TODO #9100 */ = [];
+         const log: any[] /** TODO #9100  id:184 gh:185*/ = [];
          e.subscribe((x: any) => {
            log.push(x);
            expect(log).toEqual([1, 3, 2]);
@@ -125,7 +125,7 @@ export function main() {
       expect(e.observers.length > 0).toBe(true);
     });
 
-    // TODO: vsavkin: add tests cases
+    // TODO: vsavkin: add tests cases id:115 gh:116
     // should call dispose on the subscription if generator returns {done:true}
     // should call dispose on the subscription on throw
     // should call dispose on the subscription on return

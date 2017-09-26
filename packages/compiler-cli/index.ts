@@ -21,8 +21,8 @@ export * from './src/transformers/entry_points';
 
 export * from './src/perform_compile';
 
-// TODO(tbosch): remove this once everyone is on transformers
+// TODO (tbosch): remove this once everyone is on transformers id:63 gh:64
 export {CompilerOptions as AngularCompilerOptions} from './src/transformers/api';
 
-// TODO(hansl): moving to Angular 4 need to update this API.
+// TODO (hansl): moving to Angular 4 need to update this API. id:130 gh:131
 export {NgTools_InternalApi_NG_2 as __NGTOOLS_PRIVATE_API_2} from './src/ngtools_api';

@@ -63,7 +63,7 @@ export const _WORKER_UI_PLATFORM_PROVIDERS: StaticProvider[] = [
   BROWSER_SANITIZATION_PROVIDERS,
   {provide: ErrorHandler, useFactory: _exceptionHandler, deps: []},
   {provide: DOCUMENT, useFactory: _document, deps: []},
-  // TODO(jteplitz602): Investigate if we definitely need EVENT_MANAGER on the render thread
+  // TODO (jteplitz602): Investigate if we definitely need EVENT_MANAGER on the render thread id:323 gh:324
   // #5298
   {
     provide: EVENT_MANAGER_PLUGINS,

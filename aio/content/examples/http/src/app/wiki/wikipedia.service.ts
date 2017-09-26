@@ -21,7 +21,7 @@ export class WikipediaService {
     // #enddocregion search-parameters
 
     // #docregion call-jsonp
-    // TODO: Add error handling
+    // TODO: Add error handling id:6 gh:7
     return this.jsonp
                .get(wikiUrl, { search: params })
                .map(response => <string[]> response.json()[1]);

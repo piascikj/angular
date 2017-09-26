@@ -14,7 +14,7 @@ describe('SwUpdatesService', () => {
   let checkInterval: number;
 
   // Helpers
-  // NOTE:
+  // NOTE: id:15 gh:16
   //   Because `SwUpdatesService` uses the `debounceTime` operator, it needs to be instantiated
   //   inside the `fakeAsync` zone (when `fakeAsync` is used for the test). Thus, we can't run
   //   `setup()` in a `beforeEach()` block. We use the `run()` helper to call `setup()` inside each

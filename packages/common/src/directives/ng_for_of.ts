@@ -101,7 +101,7 @@ export class NgForOf<T> implements DoCheck, OnChanges {
   @Input()
   set ngForTrackBy(fn: TrackByFunction<T>) {
     if (isDevMode() && fn != null && typeof fn !== 'function') {
-      // TODO(vicb): use a log service once there is a public one available
+      // TODO (vicb): use a log service once there is a public one available id:58 gh:59
       if (<any>console && <any>console.warn) {
         console.warn(
             `trackBy must be a function, but received ${JSON.stringify(fn)}. ` +
@@ -122,7 +122,7 @@ export class NgForOf<T> implements DoCheck, OnChanges {
 
   @Input()
   set ngForTemplate(value: TemplateRef<NgForOfContext<T>>) {
-    // TODO(TS2.1): make TemplateRef<Partial<NgForRowOf<T>>> once we move to TS v2.1
+    // TODO (TS2.1): make TemplateRef<Partial<NgForRowOf<T>>> once we move to TS v2.1 id:120 gh:121
     // The current type is too restrictive; a template that just uses index, for example,
     // should be acceptable.
     if (value) {

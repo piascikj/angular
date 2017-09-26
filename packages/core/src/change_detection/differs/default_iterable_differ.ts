@@ -177,7 +177,7 @@ export class DefaultIterableDiffer<V> implements IterableDiffer<V>, IterableChan
           mayBeDirty = true;
         } else {
           if (mayBeDirty) {
-            // TODO(misko): can we limit this to duplicates only?
+            // TODO (misko): can we limit this to duplicates only? id:291 gh:292
             record = this._verifyReinsertion(record, item, itemTrackBy, index);
           }
           if (!looseIdentical(record.item, item)) this._addIdentityChange(record, item);
@@ -194,7 +194,7 @@ export class DefaultIterableDiffer<V> implements IterableDiffer<V>, IterableChan
           mayBeDirty = true;
         } else {
           if (mayBeDirty) {
-            // TODO(misko): can we limit this to duplicates only?
+            // TODO (misko): can we limit this to duplicates only? id:97 gh:98
             record = this._verifyReinsertion(record, item, itemTrackBy, index);
           }
           if (!looseIdentical(record.item, item)) this._addIdentityChange(record, item);

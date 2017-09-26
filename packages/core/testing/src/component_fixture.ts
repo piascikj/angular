@@ -45,10 +45,10 @@ export class ComponentFixture<T> {
   private _isDestroyed: boolean = false;
   private _resolve: ((result: any) => void)|null = null;
   private _promise: Promise<any>|null = null;
-  private _onUnstableSubscription: any /** TODO #9100 */ = null;
-  private _onStableSubscription: any /** TODO #9100 */ = null;
-  private _onMicrotaskEmptySubscription: any /** TODO #9100 */ = null;
-  private _onErrorSubscription: any /** TODO #9100 */ = null;
+  private _onUnstableSubscription: any /** TODO #9100  id:121 gh:122*/ = null;
+  private _onStableSubscription: any /** TODO #9100  id:300 gh:301*/ = null;
+  private _onMicrotaskEmptySubscription: any /** TODO #9100  id:119 gh:120*/ = null;
+  private _onErrorSubscription: any /** TODO #9100  id:186 gh:187*/ = null;
 
   constructor(
       public componentRef: ComponentRef<T>, public ngZone: NgZone|null,

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 /**
  * Async modal dialog service
  * DialogService makes this app easier to test by faking this service.
- * TODO: better modal implementation that doesn't use window.confirm
+ * TODO: better modal implementation that doesn't use window.confirm id:8 gh:9
  */
 @Injectable()
 export class DialogService {

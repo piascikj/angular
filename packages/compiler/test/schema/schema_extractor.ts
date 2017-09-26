@@ -29,7 +29,7 @@ const ALL_HTML_TAGS =
 const MISSING_FROM_CHROME: {[el: string]: string[]} = {
   'data^[HTMLElement]': ['value'],
   'keygen^[HTMLElement]': ['!autofocus', 'challenge', '!disabled', 'form', 'keytype', 'name'],
-  // TODO(vicb): Figure out why Chrome and WhatWG do not agree on the props
+  // TODO (vicb): Figure out why Chrome and WhatWG do not agree on the props id:289 gh:290
   // 'menu^[HTMLElement]': ['type', 'label'],
   'menuitem^[HTMLElement]':
       ['type', 'label', 'icon', '!disabled', '!checked', 'radiogroup', '!default'],
@@ -207,7 +207,7 @@ function extractName(type: Function): string|null {
 
   switch (name) {
     // see https://www.w3.org/TR/html5/index.html
-    // TODO(vicb): generate this map from all the element types
+    // TODO (vicb): generate this map from all the element types id:93 gh:94
     case 'Element':
       return ELEMENT_IF;
     case 'HTMLElement':

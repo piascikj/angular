@@ -42,16 +42,16 @@ class HelloRootCmp2 {
 
 @Component({selector: 'hello-app', template: ''})
 class HelloRootCmp3 {
-  appBinding: any /** TODO #9100 */;
+  appBinding: any /** TODO #9100  id:245 gh:246*/;
 
-  constructor(@Inject('appBinding') appBinding: any /** TODO #9100 */) {
+  constructor(@Inject('appBinding') appBinding: any /** TODO #9100  id:214 gh:215*/) {
     this.appBinding = appBinding;
   }
 }
 
 @Component({selector: 'hello-app', template: ''})
 class HelloRootCmp4 {
-  appRef: any /** TODO #9100 */;
+  appRef: any /** TODO #9100  id:316 gh:317*/;
 
   constructor(@Inject(ApplicationRef) appRef: ApplicationRef) { this.appRef = appRef; }
 }
@@ -127,8 +127,8 @@ function bootstrap(cmpType: any, providers: Provider[] = [], platformProviders: 
 }
 
 export function main() {
-  let el: any /** TODO #9100 */, el2: any /** TODO #9100 */, testProviders: Provider[],
-      lightDom: any /** TODO #9100 */;
+  let el: any /** TODO #9100  id:158 gh:159*/, el2: any /** TODO #9100 */, testProviders: Provider[],
+      lightDom: any /** TODO #9100  id:238 gh:239*/;
 
   describe('bootstrap factory method', () => {
     let compilerConsole: DummyConsole;
